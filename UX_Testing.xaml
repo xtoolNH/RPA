@@ -411,7 +411,29 @@
                                 </sap:WorkflowViewStateService.ViewState>
                                 <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="Delay_3" />
                                 <ui:PathExists DisplayName="Check if EEG File is created" Exists="[EEG_File_Exists]" sap:VirtualizedContainerService.HintSize="314,89" sap2010:WorkflowViewState.IdRef="PathExists_1" Path="[Path_to_Reports_Folder + &quot;\&quot; + User_Folder_Name + &quot;\raw\&quot; + User_Folder_Name + &quot;_EEG.csv&quot;]" PathType="File" />
-                                <ui:PathExists DisplayName="Check if FE File is created" Exists="[FE_File_Exists]" sap:VirtualizedContainerService.HintSize="314,89" sap2010:WorkflowViewState.IdRef="PathExists_2" Path="[Path_to_Reports_Folder + &quot;\&quot; + User_Folder_Name + &quot;\raw\&quot; + User_Folder_Name + &quot;_Facial.csv&quot;]" PathType="File" />
+                                <ui:UiElementExists DisplayName="Element Exists 'python.exe  Video'" Exists="[FE_File_Exists]" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                                  <ui:UiElementExists.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="9500ca1684c4878ad3ac20f06264d4d6" Selector="&lt;wnd app='python.exe' cls='Main HighGUI class' title='Video' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+                                  </ui:UiElementExists.Target>
+                                </ui:UiElementExists>
+                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="314,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                                  <ui:CommentOut.Body>
+                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="336,213" sap2010:WorkflowViewState.IdRef="Sequence_45">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:PathExists DisplayName="Check if FE File is created" Exists="[FE_File_Exists]" sap:VirtualizedContainerService.HintSize="314,89" sap2010:WorkflowViewState.IdRef="PathExists_2" Path="[Path_to_Reports_Folder + &quot;\&quot; + User_Folder_Name + &quot;\raw\&quot; + User_Folder_Name + &quot;_Facial.csv&quot;]" PathType="File" />
+                                    </Sequence>
+                                  </ui:CommentOut.Body>
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                </ui:CommentOut>
                                 <ui:PathExists DisplayName="Check if Video is created" Exists="[Video_File_Exists]" sap:VirtualizedContainerService.HintSize="314,89" sap2010:WorkflowViewState.IdRef="PathExists_3" Path="[Path_to_Reports_Folder + &quot;\&quot; + User_Folder_Name + &quot;\raw\&quot; + User_Folder_Name + &quot;_Facial.csv&quot;]" PathType="File" />
                               </Sequence>
                               <FlowStep.Next>
@@ -423,7 +445,7 @@
                                       <av:PointCollection x:Key="ConnectorLocation">300,985.5 300,1026.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <If Condition="[EEG_File_Exists]" DisplayName="Check if Files are created" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_2">
+                                  <If Condition="[EEG_File_Exists and FE_File_Exists]" DisplayName="Check if Files are created" sap:VirtualizedContainerService.HintSize="697,459" sap2010:WorkflowViewState.IdRef="If_2">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
