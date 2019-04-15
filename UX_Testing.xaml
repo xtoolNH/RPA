@@ -66,7 +66,7 @@
       <Variable x:TypeArguments="x:String" Name="Path_to_Neurosky_Folder" />
       <Variable x:TypeArguments="x:String" Name="Path_to_FEA_Folder" />
       <Variable x:TypeArguments="x:String" Name="Path_to_Video" />
-      <Variable x:TypeArguments="x:Double" Name="Video_Wait_Time" />
+      <Variable x:TypeArguments="ui:GenericValue" Name="Video_Wait_Time" />
       <Variable x:TypeArguments="x:String" Name="Path_to_Normalization_Folder" />
       <Variable x:TypeArguments="x:Boolean" Name="Go_Ahead" />
       <Variable x:TypeArguments="sd1:DataTable" Name="Records_CSV_Content" />
@@ -135,7 +135,7 @@
                 </ui:ExcelReadCell>
                 <ui:ExcelReadCell Cell="E2" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="314,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_7" SheetName="Sheet1">
                   <ui:ExcelReadCell.Result>
-                    <OutArgument x:TypeArguments="x:Double">[Video_Wait_Time]</OutArgument>
+                    <OutArgument x:TypeArguments="ui:GenericValue">[Video_Wait_Time]</OutArgument>
                   </ui:ExcelReadCell.Result>
                 </ui:ExcelReadCell>
                 <ui:ExcelReadCell Cell="F2" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="314,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_8" SheetName="Sheet1">
@@ -152,6 +152,11 @@
             </ActivityAction>
           </ui:ExcelApplicationScope.Body>
         </ui:ExcelApplicationScope>
+        <ui:FormatValue DisplayName="Format Value" sap:VirtualizedContainerService.HintSize="414,59" sap2010:WorkflowViewState.IdRef="FormatValue_1" Value="[Video_Wait_Time]">
+          <ui:FormatValue.Format>
+            <ui:DateTimeFormatProvider Pattern="HH:mm:ss" />
+          </ui:FormatValue.Format>
+        </ui:FormatValue>
       </Sequence>
       <FlowStep.Next>
         <FlowStep x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowStep_2">
@@ -445,7 +450,7 @@
                                       <av:PointCollection x:Key="ConnectorLocation">300,985.5 300,1026.5</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <If Condition="[EEG_File_Exists and FE_File_Exists]" DisplayName="Check if Files are created" sap:VirtualizedContainerService.HintSize="697,459" sap2010:WorkflowViewState.IdRef="If_2">
+                                  <If Condition="[EEG_File_Exists and FE_File_Exists]" DisplayName="Check if Files are created" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_2">
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -481,7 +486,7 @@
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="314,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;EEG file was not created&quot;]" TopMost="True" />
+                                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="314,59" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[&quot;Unable to Start Program&quot;]" TopMost="True" />
                                         <Assign sap:VirtualizedContainerService.HintSize="314,60" sap2010:WorkflowViewState.IdRef="Assign_11">
                                           <Assign.To>
                                             <OutArgument x:TypeArguments="x:Boolean">[Go_Ahead]</OutArgument>
@@ -668,7 +673,7 @@
                                                   <av:PointCollection x:Key="ConnectorLocation">140,1255.02 140,1294.5</av:PointCollection>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <Sequence DisplayName="Ask user to End Test" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                                              <Sequence DisplayName="Ask user to End Test" sap:VirtualizedContainerService.HintSize="336,401" sap2010:WorkflowViewState.IdRef="Sequence_44">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -679,6 +684,7 @@
                                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
                                                   </ui:SendHotkey.Target>
                                                 </ui:SendHotkey>
+                                                <Delay Duration="[TimeSpan.Parse(Video_Wait_Time)]" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="Delay_10" />
                                                 <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="314,59" sap2010:WorkflowViewState.IdRef="MessageBox_8" Text="[&quot;End Test?&quot;]" TopMost="True" />
                                               </Sequence>
                                               <FlowStep.Next>

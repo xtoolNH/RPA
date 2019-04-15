@@ -941,9 +941,9 @@
     "restore": {
       "projectUniqueName": "X-Tool RPA",
       "projectName": "X-Tool RPA",
-      "projectPath": "C:\\Users\\InterviewRoom1\\Downloads\\temp\\New_Flow\\RPA\\.local",
+      "projectPath": "C:\\Users\\InterviewRoom1\\Phase1\\Backend\\RPA\\.local",
       "packagesPath": "C:\\Users\\InterviewRoom1\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\InterviewRoom1\\Downloads\\temp\\New_Flow\\RPA\\.local"
+      "outputPath": "C:\\Users\\InterviewRoom1\\Phase1\\Backend\\RPA\\.local"
     },
     "frameworks": {
       "net461": {
