@@ -66,6 +66,7 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.Studio.Plugin.Workflow</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="UX_Testing" sap:VirtualizedContainerService.HintSize="614,1915" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -587,7 +588,7 @@
                                                   <av:PointCollection x:Key="ConnectorLocation">140,1255.5 140,1284.5</av:PointCollection>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <Sequence DisplayName="Start Screen Recording" sap:VirtualizedContainerService.HintSize="1113,3119" sap2010:WorkflowViewState.IdRef="Sequence_77">
+                                              <Sequence DisplayName="Start Screen Recording" sap:VirtualizedContainerService.HintSize="1113,3020" sap2010:WorkflowViewState.IdRef="Sequence_77">
                                                 <Sequence.Variables>
                                                   <Variable x:TypeArguments="x:Boolean" Name="Confirmation" />
                                                   <Variable x:TypeArguments="x:Boolean" Name="Debut_Open" />
@@ -599,18 +600,17 @@
                                                 </sap:WorkflowViewStateService.ViewState>
                                                 <ui:UiElementExists DisplayName="Element Exists 'firefox.exe keyboard'" Exists="[Debut_Open]" sap:VirtualizedContainerService.HintSize="1091,106" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
                                                   <ui:UiElementExists.Target>
-                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="fe44aacef6884fe1ecc18678831364c0" Selector="&lt;wnd app='debut.exe' cls='#32770' title='Debut by NCH Software - *' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
+                                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="2c57898820029a82638260c5ddf3b924" Selector="&lt;wnd app='debut.exe' cls='#32770' title='Debut *' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
                                                   </ui:UiElementExists.Target>
                                                 </ui:UiElementExists>
-                                                <If Condition="[Debut_Open]" sap:VirtualizedContainerService.HintSize="1091,2594" sap2010:WorkflowViewState.IdRef="If_13">
+                                                <If Condition="[Debut_Open]" sap:VirtualizedContainerService.HintSize="1091,2495" sap2010:WorkflowViewState.IdRef="If_13">
                                                   <If.Then>
-                                                    <Sequence sap:VirtualizedContainerService.HintSize="544,2446" sap2010:WorkflowViewState.IdRef="Sequence_72">
+                                                    <Sequence sap:VirtualizedContainerService.HintSize="544,2347" sap2010:WorkflowViewState.IdRef="Sequence_72">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
-                                                      <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="522,59" sap2010:WorkflowViewState.IdRef="MessageBox_13" Text="[&quot;Debut is Open&quot;]" TopMost="True" />
                                                       <ui:WindowScope SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" ApplicationWindow="[Screen_Recorder_Window]" DisplayName="Attach Window" sap:VirtualizedContainerService.HintSize="522,2223" sap2010:WorkflowViewState.IdRef="WindowScope_1" Selector="&lt;wnd app='debut.exe' cls='#32770' title='Debut *' /&gt;">
                                                         <ui:WindowScope.Body>
                                                           <ActivityAction x:TypeArguments="x:Object">

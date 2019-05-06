@@ -1,4 +1,7 @@
 Kindly add the following packages in UIPath before running any Script:
+In UIPath:
+Press `Ctrl + P`
+
 
 1. getlatestfileactivities
 2. UIPathTeam.File.Activities
