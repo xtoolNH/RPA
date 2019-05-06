@@ -5,6 +5,7 @@
     <x:Property Name="Path_to_Normalization_Folder" Type="InOutArgument(x:String)" />
     <x:Property Name="Neurosky_Window" Type="InOutArgument(ui:Window)" />
     <x:Property Name="FEA_Window" Type="InOutArgument(ui:Window)" />
+    <x:Property Name="Screen_Recorder_Window" Type="InOutArgument(ui:Window)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
@@ -216,7 +217,7 @@
           <av:PointCollection x:Key="ConnectorLocation">300,178.5 300,224.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Stop Scripts" sap:VirtualizedContainerService.HintSize="436,516" sap2010:WorkflowViewState.IdRef="Sequence_21">
+      <Sequence DisplayName="Stop Scripts" sap:VirtualizedContainerService.HintSize="436,732" sap2010:WorkflowViewState.IdRef="Sequence_21">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -239,6 +240,16 @@
                 <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
               </ActivityAction.Argument>
               <ui:CloseWindow Selector="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Close Window" sap:VirtualizedContainerService.HintSize="314,68" sap2010:WorkflowViewState.IdRef="CloseWindow_4" UseWindow="[FEA_Window]" WaitForReady="INTERACTIVE" />
+            </ActivityAction>
+          </ui:WindowScope.Body>
+        </ui:WindowScope>
+        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Attach Window" sap:VirtualizedContainerService.HintSize="414,176" sap2010:WorkflowViewState.IdRef="WindowScope_3" Window="[Screen_Recorder_Window]">
+          <ui:WindowScope.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+              </ActivityAction.Argument>
+              <ui:CloseWindow Selector="{x:Null}" TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window" sap:VirtualizedContainerService.HintSize="314,68" sap2010:WorkflowViewState.IdRef="CloseWindow_6" WaitForReady="INTERACTIVE" />
             </ActivityAction>
           </ui:WindowScope.Body>
         </ui:WindowScope>

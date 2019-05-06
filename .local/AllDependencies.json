@@ -747,7 +747,7 @@
       ]
     },
     "UiPath.Mail.Activities/1.3.0": {
-      "sha512": "WOCrTHJWhn8MncsdC0K+fbjr9ezI0CynqNCY3MQyjbdTJHlmKvG69kC1/XgdHry0r9hknq2dhB4esgyC5jzmsw==",
+      "sha512": "dvSzZAEs6zFNnXO0X3gyIzYZHNNyWwFoQ3ZGJdDH0Rr90FBsBEsEkcxfqeI2b9NEjzqjtT/qXDA1UZy1JBOU8g==",
       "type": "package",
       "path": "uipath.mail.activities/1.3.0",
       "files": [
@@ -941,14 +941,14 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lenovo\\.nuget\\packages\\": {}
+    "C:\\Users\\abhay.bhosale\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "X-Tool RPA",
       "projectName": "X-Tool RPA",
       "projectPath": "C:\\Phase1\\Backend\\RPA\\.local",
-      "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\abhay.bhosale\\.nuget\\packages\\",
       "outputPath": "C:\\Phase1\\Backend\\RPA\\.local"
     },
     "frameworks": {

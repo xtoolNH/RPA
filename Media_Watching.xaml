@@ -7,6 +7,7 @@
     <x:Property Name="Path_to_Reports_Folder" Type="InOutArgument(x:String)" />
     <x:Property Name="Path_to_Neurosky_Folder" Type="InOutArgument(x:String)" />
     <x:Property Name="Path_to_FEA_Folder" Type="InOutArgument(x:String)" />
+    <x:Property Name="Screen_Recorder_Window" Type="InOutArgument(ui:Window)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
@@ -64,7 +65,6 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>UiPath.Studio.Plugin.Workflow</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="Media_Watching" sap:VirtualizedContainerService.HintSize="718,1876" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -549,7 +549,7 @@
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
-                                                    <ui:OpenApplication ApplicationWindow="{x:Null}" Arguments="{x:Null}" TimeoutMS="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Open Application 'debut.exe Debut'" FileName="C:\Program Files (x86)\NCH Software\Debut\debut.exe" sap:VirtualizedContainerService.HintSize="522,1977" sap2010:WorkflowViewState.IdRef="OpenApplication_4" Selector="&lt;wnd app='debut.exe' cls='#32770' title='Debut Professional by NCH Software - Licensed software' /&gt;">
+                                                    <ui:OpenApplication Arguments="{x:Null}" TimeoutMS="{x:Null}" WorkingDirectory="{x:Null}" ApplicationWindow="[Screen_Recorder_Window]" DisplayName="Open Application 'debut.exe Debut'" FileName="C:\Program Files (x86)\NCH Software\Debut\debut.exe" sap:VirtualizedContainerService.HintSize="522,1977" sap2010:WorkflowViewState.IdRef="OpenApplication_4" Selector="&lt;wnd app='debut.exe' cls='#32770' title='Debut Professional by NCH Software - Licensed software' /&gt;">
                                                       <ui:OpenApplication.Body>
                                                         <ActivityAction x:TypeArguments="x:Object">
                                                           <ActivityAction.Argument>
@@ -886,6 +886,7 @@
                                                                               <InOutArgument x:TypeArguments="x:String" x:Key="Path_to_Normalization_Folder">[Path_to_Normalization_Folder]</InOutArgument>
                                                                               <InOutArgument x:TypeArguments="ui:Window" x:Key="FEA_Window">[FEA_Window]</InOutArgument>
                                                                               <InOutArgument x:TypeArguments="ui:Window" x:Key="Neurosky_Window">[Neurosky_Window]</InOutArgument>
+                                                                              <InOutArgument x:TypeArguments="ui:Window" x:Key="Screen_Recorder_Window">[Screen_Recorder_Window]</InOutArgument>
                                                                             </ui:InvokeWorkflowFile.Arguments>
                                                                           </ui:InvokeWorkflowFile>
                                                                         </FlowStep>
