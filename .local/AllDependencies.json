@@ -941,15 +941,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\abhay.bhosale\\.nuget\\packages\\": {}
+    "C:\\Users\\InterviewRoom1\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "X-Tool RPA",
       "projectName": "X-Tool RPA",
-      "projectPath": "C:\\Phase1\\Backend\\RPA\\.local",
-      "packagesPath": "C:\\Users\\abhay.bhosale\\.nuget\\packages\\",
-      "outputPath": "C:\\Phase1\\Backend\\RPA\\.local"
+      "projectPath": "C:\\Users\\InterviewRoom1\\Downloads\\temp\\RPA\\RPA - flow_update\\.local",
+      "packagesPath": "C:\\Users\\InterviewRoom1\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\InterviewRoom1\\Downloads\\temp\\RPA\\RPA - flow_update\\.local"
     },
     "frameworks": {
       "net461": {
