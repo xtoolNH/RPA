@@ -14,7 +14,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1208,1742</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>654,2035</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Media_Watching_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -587,7 +587,7 @@
                                                   <av:PointCollection x:Key="ConnectorLocation">140,1255.5 140,1284.5</av:PointCollection>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <Sequence DisplayName="Start Screen Recording" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Sequence_77">
+                                              <Sequence DisplayName="Start Screen Recording" sap:VirtualizedContainerService.HintSize="1113,3119" sap2010:WorkflowViewState.IdRef="Sequence_77">
                                                 <Sequence.Variables>
                                                   <Variable x:TypeArguments="x:Boolean" Name="Confirmation" />
                                                   <Variable x:TypeArguments="x:Boolean" Name="Debut_Open" />
@@ -624,7 +624,7 @@
                                                                 </scg:Dictionary>
                                                               </sap:WorkflowViewStateService.ViewState>
                                                               <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="486,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_2" />
-                                                              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Text Caption'" sap:VirtualizedContainerService.HintSize="486,68" sap2010:WorkflowViewState.IdRef="Click_21" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                                                              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Text Caption'" sap:VirtualizedContainerService.HintSize="486,68" sap2010:WorkflowViewState.IdRef="Click_31" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
                                                                 <ui:Click.CursorPosition>
                                                                   <ui:CursorPosition Position="Center">
                                                                     <ui:CursorPosition.OffsetX>
@@ -639,7 +639,7 @@
                                                                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;wnd app='debut.exe' cls='#32770' title='Debut *' /&gt;&lt;wnd ctrlid='126' /&gt;" WaitForReady="INTERACTIVE" />
                                                                 </ui:Click.Target>
                                                               </ui:Click>
-                                                              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Centre' Button" sap:VirtualizedContainerService.HintSize="486,68" sap2010:WorkflowViewState.IdRef="Click_22" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                                                              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Centre' Button" sap:VirtualizedContainerService.HintSize="486,68" sap2010:WorkflowViewState.IdRef="Click_32" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
                                                                 <ui:Click.CursorPosition>
                                                                   <ui:CursorPosition Position="Center">
                                                                     <ui:CursorPosition.OffsetX>
@@ -654,7 +654,7 @@
                                                                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;wnd aaname='Text Caption' cls='#32770' /&gt;&lt;wnd ctrlid='12919' /&gt;" WaitForReady="INTERACTIVE" />
                                                                 </ui:Click.Target>
                                                               </ui:Click>
-                                                              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Bottom' Button" sap:VirtualizedContainerService.HintSize="486,68" sap2010:WorkflowViewState.IdRef="Click_23" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                                                              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Bottom' Button" sap:VirtualizedContainerService.HintSize="486,68" sap2010:WorkflowViewState.IdRef="Click_33" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
                                                                 <ui:Click.CursorPosition>
                                                                   <ui:CursorPosition Position="Center">
                                                                     <ui:CursorPosition.OffsetX>
