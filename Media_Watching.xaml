@@ -9,12 +9,12 @@
     <x:Property Name="Path_to_FEA_Folder" Type="InOutArgument(x:String)" />
     <x:Property Name="Screen_Recorder_Window" Type="InOutArgument(ui:Window)" />
     <x:Property Name="User_Video_Window" Type="InOutArgument(ui:Window)" />
-    <x:Property Name="Path_to_UserVideo_Folder" Type="InOutArgument(x:String)" />
+    <x:Property Name="Path_to_MouseClicks_Folder" Type="InOutArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>758,1996</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>758,1956</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Media_Watching_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -169,7 +169,7 @@
                 </ui:ExcelReadCell>
                 <ui:ExcelReadCell Cell="H2" DisplayName="Read Cell" sap:VirtualizedContainerService.HintSize="314,59" sap2010:WorkflowViewState.IdRef="ExcelReadCell_9" SheetName="Sheet1">
                   <ui:ExcelReadCell.Result>
-                    <OutArgument x:TypeArguments="x:String">[Path_to_UserVideo_Folder]</OutArgument>
+                    <OutArgument x:TypeArguments="x:String">[Path_to_MouseClicks_Folder]</OutArgument>
                   </ui:ExcelReadCell.Result>
                 </ui:ExcelReadCell>
               </Sequence>
@@ -431,56 +431,6 @@
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                 </ui:OpenApplication>
-                                <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="314,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                                  <ui:CommentOut.Body>
-                                    <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="222,175" sap2010:WorkflowViewState.IdRef="Sequence_70">
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <ui:OpenApplication Arguments="{x:Null}" TimeoutMS="{x:Null}" ApplicationWindow="[User_Video_Window]" DisplayName="Start User Video Script" FileName="C:\Windows\SysWOW64\cmd.exe" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="OpenApplication_8" Selector="&lt;wnd app='cmd.exe' cls='ConsoleWindowClass' title='C:\Windows\SysWOW64\cmd.exe' /&gt;" WorkingDirectory="[Path_to_UserVideo_Folder]">
-                                        <ui:OpenApplication.Body>
-                                          <ActivityAction x:TypeArguments="x:Object">
-                                            <ActivityAction.Argument>
-                                              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                                            </ActivityAction.Argument>
-                                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="336,438" sap2010:WorkflowViewState.IdRef="Sequence_69">
-                                              <sap:WorkflowViewStateService.ViewState>
-                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                </scg:Dictionary>
-                                              </sap:WorkflowViewStateService.ViewState>
-                                              <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,96" sap2010:WorkflowViewState.IdRef="TypeInto_11" SendWindowMessages="False" SimulateType="False" Text="[&quot;python main.py  &quot; + User_Folder_Name]">
-                                                <ui:TypeInto.Target>
-                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
-                                                </ui:TypeInto.Target>
-                                              </ui:TypeInto>
-                                              <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,116" sap2010:WorkflowViewState.IdRef="SendHotkey_26" Key="enter" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
-                                                <ui:SendHotkey.Target>
-                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
-                                                </ui:SendHotkey.Target>
-                                              </ui:SendHotkey>
-                                              <ui:MinimizeWindow Window="{x:Null}" DisplayName="Minimize Window" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="MinimizeWindow_3" />
-                                            </Sequence>
-                                          </ActivityAction>
-                                        </ui:OpenApplication.Body>
-                                        <sap:WorkflowViewStateService.ViewState>
-                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                          </scg:Dictionary>
-                                        </sap:WorkflowViewStateService.ViewState>
-                                      </ui:OpenApplication>
-                                    </Sequence>
-                                  </ui:CommentOut.Body>
-                                  <sap:WorkflowViewStateService.ViewState>
-                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                    </scg:Dictionary>
-                                  </sap:WorkflowViewStateService.ViewState>
-                                </ui:CommentOut>
                                 <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Create_Notes Flow" sap:VirtualizedContainerService.HintSize="314,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Create_Notes_File.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
                                     <InOutArgument x:TypeArguments="x:String" x:Key="Path_to_Reports_Folder">[Path_to_Reports_Folder]</InOutArgument>
@@ -588,7 +538,7 @@
                                                   <av:PointCollection x:Key="ConnectorLocation">140,1235.5 140,1274.02</av:PointCollection>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <Sequence DisplayName="Start Screen Recording" sap:VirtualizedContainerService.HintSize="1113,3020" sap2010:WorkflowViewState.IdRef="Sequence_34">
+                                              <Sequence DisplayName="Start Screen Recording" sap:VirtualizedContainerService.HintSize="1113,3111" sap2010:WorkflowViewState.IdRef="Sequence_34">
                                                 <Sequence.Variables>
                                                   <Variable x:TypeArguments="x:Boolean" Name="Confirmation" />
                                                   <Variable x:TypeArguments="x:Boolean" Name="Debut_Open" />
@@ -603,21 +553,21 @@
                                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="fe44aacef6884fe1ecc18678831364c0" Selector="&lt;wnd app='debut.exe' cls='#32770' title='Debut *' /&gt;" TimeoutMS="3000" WaitForReady="INTERACTIVE" />
                                                   </ui:UiElementExists.Target>
                                                 </ui:UiElementExists>
-                                                <If Condition="[Debut_Open]" sap:VirtualizedContainerService.HintSize="1091,2495" sap2010:WorkflowViewState.IdRef="If_7">
+                                                <If Condition="[Debut_Open]" sap:VirtualizedContainerService.HintSize="1091,2586" sap2010:WorkflowViewState.IdRef="If_7">
                                                   <If.Then>
-                                                    <Sequence sap:VirtualizedContainerService.HintSize="544,2347" sap2010:WorkflowViewState.IdRef="Sequence_68">
+                                                    <Sequence sap:VirtualizedContainerService.HintSize="544,2438" sap2010:WorkflowViewState.IdRef="Sequence_68">
                                                       <sap:WorkflowViewStateService.ViewState>
                                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                         </scg:Dictionary>
                                                       </sap:WorkflowViewStateService.ViewState>
-                                                      <ui:WindowScope SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" ApplicationWindow="[Screen_Recorder_Window]" DisplayName="Attach Window" sap:VirtualizedContainerService.HintSize="522,2223" sap2010:WorkflowViewState.IdRef="WindowScope_1" Selector="&lt;wnd app='debut.exe' cls='#32770' title='Debut *' /&gt;">
+                                                      <ui:WindowScope SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" ApplicationWindow="[Screen_Recorder_Window]" DisplayName="Attach Window" sap:VirtualizedContainerService.HintSize="522,2314" sap2010:WorkflowViewState.IdRef="WindowScope_1" Selector="&lt;wnd app='debut.exe' cls='#32770' title='Debut *' /&gt;">
                                                         <ui:WindowScope.Body>
                                                           <ActivityAction x:TypeArguments="x:Object">
                                                             <ActivityAction.Argument>
                                                               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                                                             </ActivityAction.Argument>
-                                                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="508,2115" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                                                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="508,2206" sap2010:WorkflowViewState.IdRef="Sequence_62">
                                                               <sap:WorkflowViewStateService.ViewState>
                                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -776,6 +726,39 @@
                                                                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
                                                                 </ui:SendHotkey.Target>
                                                               </ui:SendHotkey>
+                                                              <ui:OpenApplication Arguments="{x:Null}" TimeoutMS="{x:Null}" ApplicationWindow="[User_Video_Window]" DisplayName="Start Mouse Clicks Script" FileName="C:\Windows\SysWOW64\cmd.exe" sap:VirtualizedContainerService.HintSize="486,51" sap2010:WorkflowViewState.IdRef="OpenApplication_10" Selector="&lt;wnd app='cmd.exe' cls='ConsoleWindowClass' title='C:\Windows\SysWOW64\cmd.exe' /&gt;" WorkingDirectory="[Path_to_MouseClicks_Folder]">
+                                                                <ui:OpenApplication.Body>
+                                                                  <ActivityAction x:TypeArguments="x:Object">
+                                                                    <ActivityAction.Argument>
+                                                                      <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                                                    </ActivityAction.Argument>
+                                                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="336,438" sap2010:WorkflowViewState.IdRef="Sequence_72">
+                                                                      <sap:WorkflowViewStateService.ViewState>
+                                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                        </scg:Dictionary>
+                                                                      </sap:WorkflowViewStateService.ViewState>
+                                                                      <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,96" sap2010:WorkflowViewState.IdRef="TypeInto_13" SendWindowMessages="False" SimulateType="False" Text="[&quot;python main.py  &quot; + User_Folder_Name]">
+                                                                        <ui:TypeInto.Target>
+                                                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                                                                        </ui:TypeInto.Target>
+                                                                      </ui:TypeInto>
+                                                                      <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,116" sap2010:WorkflowViewState.IdRef="SendHotkey_29" Key="enter" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
+                                                                        <ui:SendHotkey.Target>
+                                                                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                                                                        </ui:SendHotkey.Target>
+                                                                      </ui:SendHotkey>
+                                                                      <ui:MinimizeWindow Window="{x:Null}" DisplayName="Minimize Window" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="MinimizeWindow_5" />
+                                                                    </Sequence>
+                                                                  </ActivityAction>
+                                                                </ui:OpenApplication.Body>
+                                                                <sap:WorkflowViewStateService.ViewState>
+                                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                  </scg:Dictionary>
+                                                                </sap:WorkflowViewStateService.ViewState>
+                                                              </ui:OpenApplication>
                                                               <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="486,59" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[&quot;Press OK to Start your Test&quot;]" TopMost="True" />
                                                               <Assign DisplayName="Recording Start Time" sap:VirtualizedContainerService.HintSize="486,60" sap2010:WorkflowViewState.IdRef="Assign_25">
                                                                 <Assign.To>
@@ -797,13 +780,13 @@
                                                     </Sequence>
                                                   </If.Then>
                                                   <If.Else>
-                                                    <ui:OpenApplication Arguments="{x:Null}" TimeoutMS="{x:Null}" WorkingDirectory="{x:Null}" ApplicationWindow="[Screen_Recorder_Window]" DisplayName="Open Application 'debut.exe Debut'" FileName="C:\Program Files (x86)\NCH Software\Debut\debut.exe" sap:VirtualizedContainerService.HintSize="522,2285" sap2010:WorkflowViewState.IdRef="OpenApplication_7" Selector="&lt;wnd app='debut.exe' cls='#32770' title='Debut *' /&gt;">
+                                                    <ui:OpenApplication Arguments="{x:Null}" TimeoutMS="{x:Null}" WorkingDirectory="{x:Null}" ApplicationWindow="[Screen_Recorder_Window]" DisplayName="Open Application 'debut.exe Debut'" FileName="C:\Program Files (x86)\NCH Software\Debut\debut.exe" sap:VirtualizedContainerService.HintSize="522,2376" sap2010:WorkflowViewState.IdRef="OpenApplication_7" Selector="&lt;wnd app='debut.exe' cls='#32770' title='Debut *' /&gt;">
                                                       <ui:OpenApplication.Body>
                                                         <ActivityAction x:TypeArguments="x:Object">
                                                           <ActivityAction.Argument>
                                                             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                                                           </ActivityAction.Argument>
-                                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="508,2177" sap2010:WorkflowViewState.IdRef="Sequence_65">
+                                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="508,2268" sap2010:WorkflowViewState.IdRef="Sequence_65">
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -963,6 +946,39 @@
                                                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
                                                               </ui:SendHotkey.Target>
                                                             </ui:SendHotkey>
+                                                            <ui:OpenApplication Arguments="{x:Null}" TimeoutMS="{x:Null}" ApplicationWindow="[User_Video_Window]" DisplayName="Start Mouse Clicks Script" FileName="C:\Windows\SysWOW64\cmd.exe" sap:VirtualizedContainerService.HintSize="486,51" sap2010:WorkflowViewState.IdRef="OpenApplication_11" Selector="&lt;wnd app='cmd.exe' cls='ConsoleWindowClass' title='C:\Windows\SysWOW64\cmd.exe' /&gt;" WorkingDirectory="[Path_to_MouseClicks_Folder]">
+                                                              <ui:OpenApplication.Body>
+                                                                <ActivityAction x:TypeArguments="x:Object">
+                                                                  <ActivityAction.Argument>
+                                                                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                                                                  </ActivityAction.Argument>
+                                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="336,438" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                      </scg:Dictionary>
+                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                    <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,96" sap2010:WorkflowViewState.IdRef="TypeInto_14" SendWindowMessages="False" SimulateType="False" Text="[&quot;python main.py  &quot; + User_Folder_Name]">
+                                                                      <ui:TypeInto.Target>
+                                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                                                                      </ui:TypeInto.Target>
+                                                                    </ui:TypeInto>
+                                                                    <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,116" sap2010:WorkflowViewState.IdRef="SendHotkey_30" Key="enter" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
+                                                                      <ui:SendHotkey.Target>
+                                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                                                                      </ui:SendHotkey.Target>
+                                                                    </ui:SendHotkey>
+                                                                    <ui:MinimizeWindow Window="{x:Null}" DisplayName="Minimize Window" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="MinimizeWindow_6" />
+                                                                  </Sequence>
+                                                                </ActivityAction>
+                                                              </ui:OpenApplication.Body>
+                                                              <sap:WorkflowViewStateService.ViewState>
+                                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                                </scg:Dictionary>
+                                                              </sap:WorkflowViewStateService.ViewState>
+                                                            </ui:OpenApplication>
                                                             <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="486,59" sap2010:WorkflowViewState.IdRef="MessageBox_10" Text="[&quot;Press OK to Start your Test&quot;]" TopMost="True" />
                                                             <Assign DisplayName="Recording Start Time" sap:VirtualizedContainerService.HintSize="486,60" sap2010:WorkflowViewState.IdRef="Assign_26">
                                                               <Assign.To>

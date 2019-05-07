@@ -134,7 +134,7 @@
               <av:PointCollection x:Key="ConnectorLocation">300,375.5 300,414.5</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Data Normalization Script" sap:VirtualizedContainerService.HintSize="436,1034" sap2010:WorkflowViewState.IdRef="Sequence_19">
+          <Sequence DisplayName="Data Normalization Script" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Sequence_19">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -286,7 +286,7 @@
           <av:PointCollection x:Key="ConnectorLocation">300,178.5 300,224.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Stop Scripts" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Sequence_21">
+      <Sequence DisplayName="Stop Scripts" sap:VirtualizedContainerService.HintSize="1270,688" sap2010:WorkflowViewState.IdRef="Sequence_21">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -341,73 +341,23 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:WindowScope>
-          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CommentOut_5">
-            <ui:CommentOut.Body>
-              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="436,642" sap2010:WorkflowViewState.IdRef="Sequence_28">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Attach Window" sap:VirtualizedContainerService.HintSize="414,518" sap2010:WorkflowViewState.IdRef="WindowScope_5" Window="[User_Video_Window]">
-                  <ui:WindowScope.Body>
-                    <ActivityAction x:TypeArguments="x:Object">
-                      <ActivityAction.Argument>
-                        <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                      </ActivityAction.Argument>
-                      <Sequence sap:VirtualizedContainerService.HintSize="336,410" sap2010:WorkflowViewState.IdRef="Sequence_27">
-                        <sap:WorkflowViewStateService.ViewState>
-                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          </scg:Dictionary>
-                        </sap:WorkflowViewStateService.ViewState>
-                        <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,116" sap2010:WorkflowViewState.IdRef="SendHotkey_5" Key="q" KeyModifiers="None" SendWindowMessages="False" SpecialKey="False">
-                          <ui:SendHotkey.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
-                          </ui:SendHotkey.Target>
-                        </ui:SendHotkey>
-                        <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="314,22" sap2010:WorkflowViewState.IdRef="Delay_3" />
-                        <ui:CloseWindow Selector="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Close Window" sap:VirtualizedContainerService.HintSize="314,68" sap2010:WorkflowViewState.IdRef="CloseWindow_13" UseWindow="[User_Video_Window]" WaitForReady="INTERACTIVE" />
-                      </Sequence>
-                    </ActivityAction>
-                  </ui:WindowScope.Body>
-                </ui:WindowScope>
-              </Sequence>
-            </ui:CommentOut.Body>
+          <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Attach Mouse Window" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="WindowScope_5" Window="[User_Video_Window]">
+            <ui:WindowScope.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                </ActivityAction.Argument>
+                <ui:CloseWindow Selector="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Close Window" sap:VirtualizedContainerService.HintSize="314,68" sap2010:WorkflowViewState.IdRef="CloseWindow_17" UseWindow="[User_Video_Window]" WaitForReady="INTERACTIVE" />
+              </ActivityAction>
+            </ui:WindowScope.Body>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-          </ui:CommentOut>
+          </ui:WindowScope>
         </Parallel>
-        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1034,51" sap2010:WorkflowViewState.IdRef="CommentOut_4">
-          <ui:CommentOut.Body>
-            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="436,247" sap2010:WorkflowViewState.IdRef="Sequence_26">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Attach User Video Window" sap:VirtualizedContainerService.HintSize="414,123" sap2010:WorkflowViewState.IdRef="WindowScope_4" Window="[User_Video_Window]">
-                <ui:WindowScope.Body>
-                  <ActivityAction x:TypeArguments="x:Object">
-                    <ActivityAction.Argument>
-                      <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                    </ActivityAction.Argument>
-                  </ActivityAction>
-                </ui:WindowScope.Body>
-              </ui:WindowScope>
-            </Sequence>
-          </ui:CommentOut.Body>
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-        </ui:CommentOut>
       </Sequence>
       <FlowStep.Next>
         <x:Reference>__ReferenceID2</x:Reference>
